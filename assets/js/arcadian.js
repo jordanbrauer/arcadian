@@ -90,6 +90,7 @@
     var legaciesTrackCode = 216596072;
     var fornowTrackCode = 217758070;
     var youcanbetTrackCode = 215601358;
+    var mandyTrackCode = 239751664;
 
     function soundcloudLoader(trackCode) {
         var artworkHeight = $('#music__link--alligator').height() - 6;
@@ -106,9 +107,21 @@
         return '<img src="http://cdn.arcadian.band/live/img/music/' + trackNameFiltered + '.jpg" class="img-responsive" alt="' + trackName + ' artwork"><div class="portfolio-box-caption"><div class="portfolio-box-caption-content"><div class="project-category text-faded">' + trackNameFiltered + '</div><div class="project-name">' + projectName + '</div></div></div>';
     }
 
+    $('#music__link--mandy').click(function(){
+        $(this).html(soundcloudLoader(mandyTrackCode));
+
+        $('#music__link--alligator').html(artworkImageContent('Alligator'));
+        $('#music__link--duality').html(artworkImageContent('Duality'));
+        $('#music__link--eastboundstrip').html(artworkImageContent('Eastbound Strip'));
+        $('#music__link--legacies').html(artworkImageContent('Legacies'));
+        $('#music__link--fornow').html(artworkImageContent('For Now'));
+        $('#music__link--youcanbet').html(artworkImageContent('You Can Bet'));
+    });
+
     $('#music__link--alligator').click(function() {
         $(this).html(soundcloudLoader(alligatorTrackCode));
 
+        $('#music__link--mandy').html(artworkImageContent('Mandy', 'Single'));
         $('#music__link--duality').html(artworkImageContent('Duality'));
         $('#music__link--eastboundstrip').html(artworkImageContent('Eastbound Strip'));
         $('#music__link--legacies').html(artworkImageContent('Legacies'));
@@ -119,6 +132,7 @@
     $('#music__link--duality').click(function() {
         $(this).html(soundcloudLoader(dualityTrackCode));
 
+        $('#music__link--mandy').html(artworkImageContent('Mandy', 'Single'));
         $('#music__link--alligator').html(artworkImageContent('Alligator'));
         $('#music__link--eastboundstrip').html(artworkImageContent('Eastbound Strip'));
         $('#music__link--legacies').html(artworkImageContent('Legacies'));
@@ -129,6 +143,7 @@
     $('#music__link--eastboundstrip').click(function() {
         $(this).html(soundcloudLoader(eastboundTrackCode));
 
+        $('#music__link--mandy').html(artworkImageContent('Mandy', 'Single'));
         $('#music__link--alligator').html(artworkImageContent('Alligator'));
         $('#music__link--duality').html(artworkImageContent('Duality'));
         $('#music__link--legacies').html(artworkImageContent('Legacies'));
@@ -140,6 +155,7 @@
     $('#music__link--legacies').click(function() {
         $(this).html(soundcloudLoader(legaciesTrackCode));
 
+        $('#music__link--mandy').html(artworkImageContent('Mandy', 'Single'));
         $('#music__link--alligator').html(artworkImageContent('Alligator'));
         $('#music__link--duality').html(artworkImageContent('Duality'));
         $('#music__link--eastboundstrip').html(artworkImageContent('Eastbound Strip'));
@@ -151,6 +167,7 @@
     $('#music__link--fornow').click(function() {
         $(this).html(soundcloudLoader(fornowTrackCode));
 
+        $('#music__link--mandy').html(artworkImageContent('Mandy', 'Single'));
         $('#music__link--alligator').html(artworkImageContent('Alligator'));
         $('#music__link--duality').html(artworkImageContent('Duality'));
         $('#music__link--eastboundstrip').html(artworkImageContent('Eastbound Strip'));
@@ -162,6 +179,7 @@
     $('#music__link--youcanbet').click(function() {
         $(this).html(soundcloudLoader(youcanbetTrackCode));
 
+        $('#music__link--mandy').html(artworkImageContent('Mandy', 'Single'));
         $('#music__link--alligator').html(artworkImageContent('Alligator'));
         $('#music__link--duality').html(artworkImageContent('Duality'));
         $('#music__link--eastboundstrip').html(artworkImageContent('Eastbound Strip'));

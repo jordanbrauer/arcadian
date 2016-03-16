@@ -9,24 +9,6 @@
         </div>
     </header>
 
-    <p id="events"></p>
-
-    <script id="event-template" type="text/x-handlebars-template">
-        <section class="part-padding bg-{{style}}" id="{{event.venue.displayName}}-{{event.start.date}}">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-lg-offset-3 text-center">
-                        <h2 class="section-heading">Arcadian at {{event.venue.displayName}}</h2>
-                        <hr class="{{#if primary}}light{{else}}primary{{/if}}">
-                        <div class="event-details">
-                            <p>Time: <span>{{event.start.time}}</span></p>
-                            <p>Date: <span>{{event.start.date}}</span></p>
-                            <p>Location: <span>{{event.venue.displayName}}, {{event.location.city}}</span></p>
-                            <p>Description: <span>{{event.displayName}}</span></p>
-                            <a target="_blank" class="btn btn-{{#if primary}}default{{else}}primary{{/if}}" href="{{event.uri}}">More details</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </script>
+    <div id="events">
+        <a href="http://www.songkick.com/artists/8625514" class="songkick-widget" data-theme="light" data-other-artists="on" data-track-button="on" data-detect-style="true" data-background-color="transparent">Arcadian events</a>
+    </div>

@@ -24,7 +24,7 @@ gulp.task('less', function () {
 });
 
 gulp.task('scripts', function() {
-    return gulp.src(['./assets/js/*.js', '!./assets/js/merch.js', '!./assets/js/events.js'])
+    return gulp.src(['./assets/js/*.js'])
         .pipe(concat('main.min.js'))
         .pipe(gulp.dest('./public/js'));
 });
@@ -32,14 +32,6 @@ gulp.task('scripts', function() {
 gulp.task('vendor-js', function() {
     return gulp.src(['./assets/js/vendor/jquery.js', './assets/js/vendor/*.js'])
         .pipe(concat('vendor.min.js'))
-        .pipe(gulp.dest('./public/js'));
-});
-
-gulp.task('copy-js', function() {
-    return gulp.src(['./assets/js/merch.js', './assets/js/events.js'])
-        .pipe(rename({
-            suffix: '.min'
-        }))
         .pipe(gulp.dest('./public/js'));
 });
 
@@ -65,7 +57,7 @@ gulp.task('music', function() {
         .pipe(gulp.dest('./public/music/'));
 });
 
-gulp.task('minify-js', ['vendor-js', 'scripts', 'copy-js'], function() {
+gulp.task('minify-js', ['vendor-js', 'scripts'], function() {
     return gulp.src(['./public/js/**/*.js'])
         .pipe(uglify())
         .pipe(gulp.dest('./public/js'));
@@ -77,7 +69,7 @@ gulp.task('minify-css', ['vendor-css', 'less'], function() {
         .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('aws-publish', function() {
+gulp.task('aws-publish', ['minify-js', 'minify-css', 'fonts', 'images'], function() {
     var publisher = aws.create({
         params: {
             Bucket: config.aws.bucket
@@ -103,7 +95,6 @@ gulp.task('watch', function() {
     gulp.watch('./assets/less/**/*.less', ['less']);
     gulp.watch('./assets/js/*.js', ['scripts']);
     gulp.watch('./assets/js/vendor/*.js', ['vendor-js']);
-    gulp.watch('./assets/js/merch.js', ['copy-js']);
     gulp.watch('./assets/css/vendor/*.css', ['vendor-css']);
     gulp.watch(['./assets/fonts/**/*', './assets/font-awesome/**/*', './assets/img/**/*', './assets/music/**/*'], ['copy-assets']);
 });
@@ -111,8 +102,8 @@ gulp.task('watch', function() {
 gulp.task('build', ['less']);
 gulp.task('minify', ['minify-css', 'minify-js']);
 gulp.task('concat', ['vendor-css', 'vendor-js', 'scripts'])
-gulp.task('copy-assets', ['images', 'fonts', 'music', 'copy-js']);
+gulp.task('copy-assets', ['images', 'fonts', 'music']);
 
-gulp.task('deploy', ['build', 'copy-assets', 'concat', 'minify']);
+gulp.task('deploy', ['build', 'copy-assets', 'concat', 'minify', 'aws-publish']);
 
 gulp.task('default', ['build', 'copy-assets', 'concat', 'watch']);
