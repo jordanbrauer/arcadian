@@ -84,13 +84,13 @@
         }
     });
 
+    var mandyTrackCode = 239751664;
     var alligatorTrackCode = 219782758;
     var dualityTrackCode = 219782667;
     var eastboundTrackCode = 215601338;
     var legaciesTrackCode = 216596072;
     var fornowTrackCode = 217758070;
     var youcanbetTrackCode = 215601358;
-    var mandyTrackCode = 239751664;
 
     function soundcloudLoader(trackCode) {
         var artworkHeight = $('#music__link--alligator').height() - 6;

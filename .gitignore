@@ -2,5 +2,5 @@ npm-debug.log
 node_modules/
 .sass-cache/
 public/
-.aswpublish*
+.awspublish*
 config.js

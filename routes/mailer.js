@@ -9,8 +9,11 @@ router.route('/')
 
         if(req.body.name && req.body.email && req.body.message && req.body['g-recaptcha-response']) {
 
-            request('https://www.google.com/recaptcha/api/siteverify?secret="' + config.captcha.secretKey + '"&response="' + req.body['g-recaptcha-response'] + '"', function(error, response, body) {
-                if(body.success) {
+            var requestUrl = 'https://www.google.com/recaptcha/api/siteverify?secret=' + config.captcha.secretKey + '&response=' + req.body['g-recaptcha-response'];
+
+            request(requestUrl, function(error, response, body) {
+                info = JSON.parse(body);
+                if(info.success) {
 
                     var senderName = req.body.name;
                     var senderEmail = req.body.email;
