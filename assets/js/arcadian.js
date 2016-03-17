@@ -47,8 +47,7 @@
         var formMessage = $('#form-message');
         var formMessageContent = $('#form-message-content');
 
-        // if(grecaptcha.getResponse().length === 0) {
-        if(false) {
+        if(grecaptcha.getResponse().length === 0) {
             formMessageContent.html('Please complete the captcha');
             formMessage.show();
 
@@ -60,11 +59,11 @@
                 url: '/mailer',
                 data: formData,
                 success: function(response) {
-                    // $('#contact-form #name').val('');
-                    // $('#contact-form #email').val('');
-                    // $('#contact-form #message').val('');
+                    $('#contact-form #name').val('');
+                    $('#contact-form #email').val('');
+                    $('#contact-form #message').val('');
 
-                    // grecaptcha.reset();
+                    grecaptcha.reset();
 
                     formMessageContent.html(response.message);
                     formMessage.show();
