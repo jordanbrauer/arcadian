@@ -48,8 +48,7 @@
         var formMessageContent = $('#form-message-content');
 
         if(grecaptcha.getResponse().length === 0) {
-            formMessageContent.html('Please complete the captcha');
-            formMessage.show();
+            formMessageContent.html('Please complete the captcha').show();
 
         } else {
             var formData = $(form).serialize();
@@ -65,19 +64,10 @@
 
                     grecaptcha.reset();
 
-                    formMessageContent.html(response.message);
-                    formMessage.show();
+                    formMessageContent.html(response.message).show();
                 },
                 error: function(err) {
-                    console.log(err);
-                    if(err.responseJSON.message !== '') {
-                        formMessageContent.html(err.responseJSON.message);
-
-                    } else {
-                        formMessageContent.html('Oops! An error occured and your message could not be sent.');
-                    }
-
-                    formMessage.show();
+                    formMessageContent.html('Oops! An error occured and your message could not be sent.').show();
                 }
             });
         }
