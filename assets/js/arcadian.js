@@ -93,7 +93,7 @@
         var trackNameFiltered = trackName.replace(/\s+/g, '');
         trackNameFiltered = trackNameFiltered.toLowerCase();
 
-        return '<img src="http://cdn.arcadian.band/live/img/music/' + trackNameFiltered + '.jpg" class="img-responsive" alt="' + trackName + ' artwork"><div class="portfolio-box-caption"><div class="portfolio-box-caption-content"><div class="project-category text-faded">' + trackNameFiltered + '</div><div class="project-name">' + projectName + '</div></div></div>';
+        return '<img src="../img/music/' + trackNameFiltered + '.jpg" class="img-responsive" alt="' + trackName + ' artwork"><div class="portfolio-box-caption"><div class="portfolio-box-caption-content"><div class="project-category text-faded">' + trackNameFiltered + '</div><div class="project-name">' + projectName + '</div></div></div>';
     }
 
     $('#music__link--mandy').click(function(){
