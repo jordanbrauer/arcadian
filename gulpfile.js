@@ -58,18 +58,18 @@ gulp.task('music', function() {
 });
 
 gulp.task('minify-js', ['vendor-js', 'scripts'], function() {
-    return gulp.src(['./public/js/**/*.js'])
+    return gulp.src(['./public/js/*.js'])
         .pipe(uglify())
         .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('minify-css', ['vendor-css', 'less'], function() {
-    return gulp.src(['./public/css/main.min.css', './public/css/vendor.min.css'])
+    return gulp.src(['./public/css/*.css'])
         .pipe(minifyCss())
         .pipe(gulp.dest('./public/css'));
 });
 
-gulp.task('aws-publish', ['minify-js', 'minify-css', 'fonts', 'images'], function() {
+gulp.task('aws-publish', ['minify-js', 'minify-css', 'fonts', 'images', 'music'], function() {
     var publisher = aws.create({
         params: {
             Bucket: config.aws.bucket
