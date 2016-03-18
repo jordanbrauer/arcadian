@@ -1,8 +1,9 @@
 var app = require('../app');
 var debug = require('debug')('node-express-server:server');
 var http = require('http');
+var config = require('../config/config');
 
-var port = normalizePort(process.env.PORT || '3003');
+var port = normalizePort(process.env.PORT || config.port);
 app.set('port', port);
 console.log("Server listening on " + port);
 
