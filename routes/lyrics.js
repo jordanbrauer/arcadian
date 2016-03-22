@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
         title: 'Arcadian Band | lyrics',
         cdn: config.cdn[config.env].url,
         currentYear: new Date().getFullYear(),
-        baseLocation: '../'
+        basePath: '../'
     });
 });
 

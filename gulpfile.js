@@ -8,9 +8,9 @@ var concat = require('gulp-concat');
 var rename = require('gulp-rename');
 var uglify = require('gulp-uglify');
 var aws = require('gulp-awspublish');
+var config = require('./config/config');
 var imagemin = require('gulp-imagemin');
 var concatCss = require('gulp-concat-css');
-var config = require('./config/config.js');
 var minifyCss = require('gulp-minify-css');
 var pngquant = require('imagemin-pngquant');
 
