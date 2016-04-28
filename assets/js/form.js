@@ -1,4 +1,4 @@
-$('#form-message').hide();
+$('#form-message-content').hide();
 
     $('#contact-form').submit(function(e) {
         e.preventDefault();
