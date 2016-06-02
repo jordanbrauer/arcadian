@@ -26,7 +26,7 @@ function artworkImageContent(trackName, projectName) {
     var trackNameFiltered = trackName.replace(/\s+/g, '');
     trackNameFiltered = trackNameFiltered.toLowerCase();
 
-    return '<img src="../img/music/' + trackNameFiltered + '.jpg" class="img-responsive" alt="' + trackName + ' artwork"><div class="portfolio-box-caption"><div class="portfolio-box-caption-content"><div class="project-category text-faded">' + trackNameFiltered + '</div><div class="project-name">' + projectName + '</div></div></div>';
+    return '<img src="../img/music/' + trackNameFiltered + '.jpg" class="img-responsive" alt="' + trackName + ' artwork"><div class="portfolio-box-caption"><div class="portfolio-box-caption-content"><div class="project-category text-faded">' + projectName + '</div><div class="project-name">' + trackName + '</div></div></div>';
 }
 
 mandySelector.click(function(){
