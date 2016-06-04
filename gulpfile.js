@@ -48,7 +48,7 @@ gulp.task('images', function () {
 });
 
 gulp.task('fonts', function() {
-    gulp.src(['./assets/fonts/*', './assets/font-awesome/**/*'])
+    gulp.src(['./assets/fonts/*'])
         .pipe(gulp.dest('./public/fonts/'));
 });
 
@@ -96,12 +96,12 @@ gulp.task('watch', function() {
     gulp.watch('./assets/js/*.js', ['scripts']);
     gulp.watch('./assets/js/vendor/*.js', ['vendor-js']);
     gulp.watch('./assets/css/vendor/*.css', ['vendor-css']);
-    gulp.watch(['./assets/fonts/**/*', './assets/font-awesome/**/*', './assets/img/**/*', './assets/music/**/*'], ['copy-assets']);
+    gulp.watch(['./assets/fonts/**/*', './assets/img/**/*', './assets/music/**/*'], ['copy-assets']);
 });
 
 gulp.task('build', ['less']);
 gulp.task('minify', ['minify-css', 'minify-js']);
-gulp.task('concat', ['vendor-css', 'vendor-js', 'scripts'])
+gulp.task('concat', ['vendor-css', 'vendor-js', 'scripts']);
 gulp.task('copy-assets', ['images', 'fonts', 'music']);
 
 gulp.task('deploy', ['build', 'copy-assets', 'concat', 'minify', 'aws-publish']);
