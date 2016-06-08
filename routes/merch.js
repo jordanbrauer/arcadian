@@ -6,8 +6,6 @@ router.get('/', function (req, res, next) {
     res.render('merch', {
         layout: 'layout',
         title: 'Arcadian Band | merch',
-        cdn: config.cdn[config.env].url,
-        currentYear: new Date().getFullYear(),
         basePath: '../'
     });
 });

@@ -19,7 +19,7 @@ $('.navbar-collapse ul li a').click(function() {
 
 $('#mainNav').affix({
     offset: {
-        top: 100
+        top: 30
     }
 });
 

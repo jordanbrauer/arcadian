@@ -1,5 +1,5 @@
 var express = require('express');
-var exphbs = require('express-handlebars');
+var hbs = require('express-handlebars');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -14,12 +14,16 @@ var merch = require('./routes/merch');
 var lyrics = require('./routes/lyrics');
 var gallery = require('./routes/gallery');
 var mailer = require('./routes/mailer');
+var tinu = require('./routes/tinu');
 
 // Init the express app
 var app = express();
 
 // view engine setup
-app.engine('.hbs', exphbs({extname: '.hbs'}));
+app.engine('.hbs', hbs({
+    extname: '.hbs',
+    partialsDir: './views/partials'
+}));
 app.set('view engine', '.hbs');
 
 app.use(favicon(path.join(__dirname, 'assets', 'favicon.ico')));
@@ -29,6 +33,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+app.locals = {
+    tinu: config.tinu,
+    currentYear: new Date().getFullYear(),
+    cdn: config.cdn[config.env].url
+};
+
 // Use the routes
 app.use('/', index);
 app.use('/events', events);
@@ -36,6 +46,7 @@ app.use('/merch', merch);
 app.use('/lyrics', lyrics);
 app.use('/gallery', gallery);
 app.use('/mailer', mailer);
+app.use('/tinu', tinu);
 
 // Catch 404 and forward to error handler
 app.use(function(req, res, next) {

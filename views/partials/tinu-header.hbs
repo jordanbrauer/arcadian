@@ -1,0 +1,33 @@
+<header class="tinu">
+    <div class="header-content">
+        <div class="header-content-inner">
+            <img class="logo-main" src="{{cdn}}/img/arcadian-long-logo.png" alt="arcadian logo">
+            <h1>TINU</h1>
+
+            {{#if tinu.released}}
+                <hr class="secondary-theme">
+                <a href="tinu" class="btn btn-primary btn-xl page-scroll secondary-theme">Listen now</a>
+            {{else}}
+                <div id="countdown">
+                    <div class="countdown-box col-sm-3 col-xs-6">
+                        <div class="days">00</div>
+                        <div class="text">Days</div>
+                    </div>
+                    <div class="countdown-box col-sm-3 col-xs-6">
+                        <div class="hours">00</div>
+                        <div class="text">Hours</div>
+                    </div>
+                    <div class="countdown-box col-sm-3 col-xs-6">
+                        <div class="minutes">00</div>
+                        <div class="text">Minutes</div>
+                    </div>
+                    <div class="countdown-box col-sm-3 col-xs-6">
+                        <div class="seconds">00</div>
+                        <div class="text">Seconds</div>
+                    </div>
+                </div>
+            {{/if}}
+
+        </div>
+    </div>
+</header>

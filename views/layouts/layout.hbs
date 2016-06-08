@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Official website of the St Albans based band Arcadian">
+    <meta name="theme-color" content="#4c1e5c">
     <meta name="author" content="Arcadian">
 
     <title>{{title}}</title>
@@ -33,7 +34,6 @@
 
     <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
         <div class="container-fluid">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
@@ -50,6 +50,11 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
+                    {{#if tinu.released}}
+                    <li>
+                        <a class="page-scroll" href="{{basePath}}tinu">TINU</a>
+                    </li>
+                    {{/if}}
                     <li>
                         <a class="page-scroll" href="{{basePath}}#about">About</a>
                     </li>
