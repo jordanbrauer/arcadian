@@ -1,5 +1,3 @@
-# Node api with Mongo, Express and Handlebars
+# Arcadian
 
-### Disclaimer
-
-This project was made purely to mess around with stuff so is in no way deemed to be in a workable/usable state.  There is also a 99% chance that it will never be finshed!
+Website of the band [Arcadian](http://arcadian.band)
