@@ -19,7 +19,6 @@ router.route('/')
                 info = JSON.parse(body);
 
                 if(info.success) {
-
                     var senderName = req.body.name;
                     var senderEmail = req.body.email;
                     var senderMessage = req.body.message;

@@ -1,5 +1,5 @@
 var express = require('express');
-var hbs = require('express-handlebars');
+var exphbs = require('express-handlebars');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -20,10 +20,12 @@ var tinu = require('./routes/tinu');
 var app = express();
 
 // view engine setup
-app.engine('.hbs', hbs({
+var hbs = exphbs.create({
     extname: '.hbs',
+    defaultLayout: 'main',
     partialsDir: './views/partials'
-}));
+});
+app.engine('.hbs', hbs.engine);
 app.set('view engine', '.hbs');
 
 app.use(favicon(path.join(__dirname, 'assets', 'favicon.ico')));
