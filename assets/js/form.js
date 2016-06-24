@@ -1,4 +1,5 @@
-$('#form-message-content').hide();
+require(['main'], function() {
+    $('#form-message-content').hide();
 
     $('#contact-form').submit(function(e) {
         e.preventDefault();
@@ -9,26 +10,25 @@ $('#form-message-content').hide();
 
         if(grecaptcha.getResponse().length === 0) {
             formMessageContent.html('Please complete the captcha').show();
-
-        } else {
-            var formData = $(form).serialize();
-
-            $.ajax({
-                type: 'POST',
-                url: '/mailer',
-                data: formData,
-                success: function(response) {
-                    $('#contact-form #name').val('');
-                    $('#contact-form #email').val('');
-                    $('#contact-form #message').val('');
-
-                    grecaptcha.reset();
-
-                    formMessageContent.html(response.message).show();
-                },
-                error: function(err) {
-                    formMessageContent.html('Oops! An error occured and your message could not be sent.').show();
-                }
-            });
+            return;
         }
+
+        var formData = $(form).serialize();
+        $.ajax({
+            type: 'POST',
+            url: '/mailer',
+            data: formData,
+            success: function(response) {
+                $('#contact-form #name').val('');
+                $('#contact-form #email').val('');
+                $('#contact-form #message').val('');
+
+                grecaptcha.reset();
+                formMessageContent.html(response.message).show();
+            },
+            error: function(err) {
+                formMessageContent.html('Oops! An error occured and your message could not be sent.').show();
+            }
+        });
     });
+});

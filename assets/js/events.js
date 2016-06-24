@@ -1,4 +1,4 @@
-if(window.location.pathname == '/events') {
+require(['main'], function() {
     var counter = $('#num-of-events');
     $.ajax({
         url: '//api.songkick.com/api/3.0/artists/8625514/calendar.json?apikey=jwzmbEyCAIwD7HCy&jsoncallback=?',
@@ -20,4 +20,4 @@ if(window.location.pathname == '/events') {
             counter.html('No events found');
         }
     });
-}
+});

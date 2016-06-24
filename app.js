@@ -38,7 +38,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.locals = {
     tinu: config.tinu,
     currentYear: new Date().getFullYear(),
-    cdn: config.cdn[config.env].url
+    cdn: config.cdn[config.env].url,
+    basePath: '../',
+    requireModule: 'main'
 };
 
 // Use the routes
@@ -61,6 +63,7 @@ app.use(function(req, res, next) {
 app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
+        layout: null,
         message: err.message,
         error: err
     });

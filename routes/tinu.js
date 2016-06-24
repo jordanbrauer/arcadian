@@ -6,7 +6,7 @@ router.get('/', function (req, res, next) {
     if(config.tinu.released) {
         res.render('tinu', {
             title: 'Arcadian Band | TINU',
-            basePath: '../'
+            requireModule: 'tinu'
         });
     } else {
         res.redirect('/');

@@ -24,13 +24,12 @@ gulp.task('less', function () {
 });
 
 gulp.task('scripts', function() {
-    return gulp.src(['./assets/js/*.js'])
-        .pipe(concat('main.min.js'))
+    return gulp.src(['./assets/js/*.js', './assets/js/vendor/require.js'])
         .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('vendor-js', function() {
-    return gulp.src(['./assets/js/vendor/jquery.js', './assets/js/vendor/*.js'])
+    return gulp.src(['!./assets/js/vendor/require.js', './assets/js/vendor/jquery.js', './assets/js/vendor/classie.js', './assets/js/vendor/*.js'])
         .pipe(concat('vendor.min.js'))
         .pipe(gulp.dest('./public/js'));
 });
