@@ -1,1 +1,1 @@
-require(['main', 'soundcloud'], function() {});
+require(['main', 'music'], function() {});
