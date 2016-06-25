@@ -1,4 +1,4 @@
-require(['main'], function() {
+require(['main', 'https://apis.google.com/js/platform.js', 'https://www.google.com/recaptcha/api.js'], function() {
     $('#form-message-content').hide();
 
     $('#contact-form').submit(function(e) {

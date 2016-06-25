@@ -38,6 +38,9 @@ require(['main'], function() {
         var timeinterval = setInterval(updateClock, 1000);
     }
 
-    var deadline = new Date(Date.parse(new Date("July 30 2016")));
-    initializeClock('countdown', deadline);
+    var deadline = new Date(Date.parse(new Date('July 30 2016')));
+
+    if($('#countdown').length) {
+        initializeClock('countdown', deadline);
+    }
 });
