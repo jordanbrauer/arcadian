@@ -1,1 +1,1 @@
-require(['main', 'soundcloud', 'form', 'countdown'], function() {});
+require(['main', 'music', 'form', 'countdown'], function() {});
