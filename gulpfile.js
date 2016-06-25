@@ -19,7 +19,7 @@ gulp.task('less', function () {
         .pipe(less({
             paths: [ path.join(__dirname, 'less', 'includes') ]
         }))
-        .pipe(rename('main.min.css'))
+        .pipe(rename('main.css'))
         .pipe(gulp.dest('./public/css'));
 });
 
@@ -30,13 +30,13 @@ gulp.task('scripts', function() {
 
 gulp.task('vendor-js', function() {
     return gulp.src(['!./assets/js/vendor/require.js', './assets/js/vendor/jquery.js', './assets/js/vendor/classie.js', './assets/js/vendor/*.js'])
-        .pipe(concat('vendor.min.js'))
+        .pipe(concat('vendor.js'))
         .pipe(gulp.dest('./public/js'));
 });
 
 gulp.task('vendor-css', function () {
     return gulp.src('assets/css/vendor/*.css')
-        .pipe(concatCss('vendor.min.css'))
+        .pipe(concatCss('vendor.css'))
         .pipe(gulp.dest('./public/css'));
 });
 
