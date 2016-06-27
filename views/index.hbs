@@ -1,14 +1,11 @@
-    {{#if tinu.promo}}
-        {{>tinu-header}}
-        {{>tinu-about}}
-    {{else}}
-        {{>header}}
-        {{>about}}
-    {{/if}}
+{{#if tinu.promo}}
+    {{>tinu-header}}
+    {{>tinu-about}}
+{{else}}
+    {{>header}}
+    {{>about}}
+{{/if}}
 
     {{>music}}
     {{>social}}
     {{>contact}}
-
-    <script async src="https://apis.google.com/js/platform.js"></script>
-    <script async src='https://www.google.com/recaptcha/api.js'></script>

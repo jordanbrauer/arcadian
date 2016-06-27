@@ -4,7 +4,7 @@ var router = express.Router();
 router.get('/', function (req, res, next) {
     res.render('index', {
         title: 'Arcadian Band',
-        basePath: './',
+        basePath: '',
         requireModule: 'home'
     });
 });
