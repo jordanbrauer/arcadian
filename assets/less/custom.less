@@ -1,3 +1,7 @@
+.btn-primary:hover {
+    background-color: @theme-secondary;
+}
+
 .seo {
     display: none !important;
 }
@@ -15,11 +19,12 @@ section#contact {
 }
 
 .social__link {
-    color: #000;
+    color: @theme-primary;
+    display: block;
 
     &:hover {
         text-decoration: none;
-        color: #000;
+        color: @theme-secondary;
     }
 }
 
@@ -57,6 +62,10 @@ img.logo-light {
 
 img.logo-dark {
     display: none;
+}
+
+.service-box {
+    max-width: 200px;
 }
 
 @media (max-width: 767px){

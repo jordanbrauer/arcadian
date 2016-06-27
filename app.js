@@ -39,7 +39,7 @@ app.locals = {
     tinu: config.tinu,
     currentYear: new Date().getFullYear(),
     cdn: config.cdn[config.env].url,
-    basePath: '../',
+    basePath: '..',
     requireModule: 'main'
 };
 
