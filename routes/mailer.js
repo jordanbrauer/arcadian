@@ -3,7 +3,6 @@ var router = express.Router();
 var request = require('request');
 var nodemailer = require('nodemailer');
 var sgTransport = require('nodemailer-sendgrid-transport');
-
 var config = require('../config/config');
 
 router.route('/')
@@ -22,7 +21,6 @@ router.route('/')
                     var senderName = req.body.name;
                     var senderEmail = req.body.email;
                     var senderMessage = req.body.message;
-                    var headers = 'From: webmaster@arcadian.band' + "\r\n" + 'Reply-To:' + senderEmail + "\r\n";
 
                     var authOptions = {
                         auth: {
@@ -37,7 +35,7 @@ router.route('/')
                             'Reply-To': senderEmail
                         },
                         subject: 'Website message from ' + senderName,
-                        text: 'Name: ' + senderName + '\n\n' + 'Email: ' + senderEmail + '\n\n\n' + 'Message:\n' + senderMessage
+                        text: 'Name: ' + senderName + '\n\n' + 'Email: ' + senderEmail + '\n\n\n' + 'Message:\n\n' + senderMessage
                     };
 
                     var transporter = nodemailer.createTransport(sgTransport(authOptions));

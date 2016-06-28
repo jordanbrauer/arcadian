@@ -1,33 +1,35 @@
 require(['main', 'https://apis.google.com/js/platform.js', 'https://www.google.com/recaptcha/api.js'], function() {
-    $('#form-message-content').hide();
+    var contactForm = $('#contact-form');
+    var formMessage = $('.form-message p');
 
-    $('#contact-form').submit(function(e) {
+    formMessage.hide();
+    autosize(contactForm.find('.message'));
+
+    contactForm.submit(function(e) {
         e.preventDefault();
 
-        var form = $('#contact-form');
-        var formMessage = $('#form-message');
-        var formMessageContent = $('#form-message-content');
-
         if(grecaptcha.getResponse().length === 0) {
-            formMessageContent.html('Please complete the captcha').show();
+            formMessage.html('Please complete the captcha').show();
             return;
         }
 
-        var formData = $(form).serialize();
+        formMessage.html('Sending...').show();
+
         $.ajax({
             type: 'POST',
             url: '/mailer',
-            data: formData,
+            data: contactForm.serialize(),
             success: function(response) {
-                $('#contact-form #name').val('');
-                $('#contact-form #email').val('');
-                $('#contact-form #message').val('');
+                contactForm.find('.name').val('');
+                contactForm.find('.email').val('');
+                contactForm.find('.message').val('');
 
                 grecaptcha.reset();
-                formMessageContent.html(response.message).show();
+                autosize.update(contactForm.find('.message'));
+                formMessage.html(response.message).show();
             },
             error: function(err) {
-                formMessageContent.html('Oops! An error occured and your message could not be sent.').show();
+                formMessage.html('Oops! An error occured and your message could not be sent.').show();
             }
         });
     });
