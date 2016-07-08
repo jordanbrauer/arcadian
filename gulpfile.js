@@ -12,7 +12,6 @@ var config = require('./config/config');
 var imagemin = require('gulp-imagemin');
 var concatCss = require('gulp-concat-css');
 var minifyCss = require('gulp-minify-css');
-var pngquant = require('imagemin-pngquant');
 
 gulp.task('less', function () {
     return gulp.src(['./assets/less/arcadian.less'])
@@ -42,7 +41,11 @@ gulp.task('vendor-css', function () {
 
 gulp.task('images', function () {
     return gulp.src('assets/img/**/*')
-        .pipe(imagemin())
+        .pipe(imagemin([
+            imagemin.jpegtran({
+                progressive: true
+            })
+        ]))
         .pipe(gulp.dest('public/img'));
 });
 
