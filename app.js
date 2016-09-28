@@ -10,7 +10,6 @@ var config = require('./config/config');
 // Define the routes
 var index = require('./routes/index');
 var events = require('./routes/events');
-var merch = require('./routes/merch');
 var lyrics = require('./routes/lyrics');
 var gallery = require('./routes/gallery');
 var mailer = require('./routes/mailer');
@@ -36,7 +35,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.locals = {
-    tinu: config.tinu,
+    flagpole: config.flagpole,
     currentYear: new Date().getFullYear(),
     cdn: config.cdn[config.env].url,
     basePath: '..',
@@ -46,7 +45,6 @@ app.locals = {
 // Use the routes
 app.use('/', index);
 app.use('/events', events);
-app.use('/merch', merch);
 app.use('/lyrics', lyrics);
 app.use('/gallery', gallery);
 app.use('/mailer', mailer);
