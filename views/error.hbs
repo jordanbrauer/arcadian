@@ -4,15 +4,22 @@
     <meta charset="UTF-8">
     <title>Error {{error.status}}</title>
     <style>
-        body {
+        html {
+            background: url(/img/error.gif) no-repeat left center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
             font-family: 'Helvetica', Arial;
             margin: 20px;
+            color: #000;
         }
     </style>
 </head>
 <body>
 
-<h1>Error {{error.status}} - {{message}}</h1>
+    <h1>Error {{error.status}}</h1>
+    <h2>{{error.message}}</h2>
 
 </body>
 </html>

@@ -52,8 +52,22 @@ app.use('/tinu', tinu);
 
 // Catch 404 and forward to error handler
 app.use(function(req, res, next) {
-    var err = new Error('Not Found');
+    var err = new Error('This is not the page you are looking for');
     err.status = 404;
+    next(err);
+});
+
+// Catch 403 and forward to error handler
+app.use(function(req, res, next) {
+    var err = new Error('You should not be here, go away!');
+    err.status = 403;
+    next(err);
+});
+
+// Catch 500 and forward to error handler
+app.use(function(req, res, next) {
+    var err = new Error('Oopsie, the server did a naughty');
+    err.status = 500;
     next(err);
 });
 
@@ -62,7 +76,6 @@ app.use(function(err, req, res, next) {
     res.status(err.status || 500);
     res.render('error', {
         layout: null,
-        message: err.message,
         error: err
     });
 });
