@@ -1,4 +1,4 @@
-require(['tracker'], function() {
+define('main', ['tracker'], function() {
     $('a[href="..' + this.location.pathname + '"]').parent().addClass('active');
 
     $('a.page-scroll').bind('click', function(event) {

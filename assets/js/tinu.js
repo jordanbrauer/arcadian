@@ -1,1 +1,1 @@
-require(['main', 'music'], function() {});
+define('tinu', ['main', 'music'], function() {});

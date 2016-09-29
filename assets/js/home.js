@@ -1,1 +1,1 @@
-require(['main', 'music', 'form', 'countdown'], function() {});
+define('home', ['main', 'music', 'form', 'countdown'], function() {});

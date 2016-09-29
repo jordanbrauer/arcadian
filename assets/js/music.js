@@ -1,4 +1,4 @@
-require(['main'], function() {
+define('music', ['main'], function() {
     function generateWidget(selector, trackCode) {
         var artworkHeight = selector.height() - 5;
 

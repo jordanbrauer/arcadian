@@ -1,4 +1,4 @@
-require(['main', 'https://apis.google.com/js/platform.js', 'https://www.google.com/recaptcha/api.js'], function() {
+define('form', ['main', 'https://apis.google.com/js/platform.js', 'https://www.google.com/recaptcha/api.js'], function() {
     var contactForm = $('#contact-form');
     var formMessage = $('.form-message p');
 
