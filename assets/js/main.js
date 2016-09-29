@@ -1,4 +1,4 @@
-define('main', ['tracker'], function() {
+define('main', [], function() {
     $('a[href="..' + this.location.pathname + '"]').parent().addClass('active');
 
     $('a.page-scroll').bind('click', function(event) {
