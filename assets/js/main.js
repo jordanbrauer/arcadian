@@ -24,16 +24,5 @@ define('main', [], function() {
         }
     });
 
-    $(window).on('load scroll', function() {
-        if ($('#mainNav').hasClass('affix')) {
-            $('img.logo-light').hide();
-            $('img.logo-dark').show();
-
-        } else {
-            $('img.logo-light').show();
-            $('img.logo-dark').hide();
-        }
-    });
-
     new WOW().init();
 });

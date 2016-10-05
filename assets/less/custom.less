@@ -29,7 +29,6 @@ section#contact {
 }
 
 .event-details {
-
     p {
         font-weight: bold;
     }
@@ -43,6 +42,26 @@ section#contact {
     padding: 20px;
 }
 
+#mainNav {
+    &.affix {
+        & .logo-light {
+            display: none;
+        }
+
+        & .logo-dark {
+            display: block;
+        }
+    }
+
+    & .logo-light {
+        display: block;
+    }
+
+    & .logo-dark {
+        display: none;
+    }
+}
+
 .logo-main {
     margin: 0 auto;
     height: 8vw;
@@ -54,14 +73,6 @@ section#contact {
 
 img.logo-brand {
     height: 20px;
-}
-
-img.logo-light {
-    display: block;
-}
-
-img.logo-dark {
-    display: none;
 }
 
 .service-box {
