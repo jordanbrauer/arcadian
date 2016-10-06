@@ -71,28 +71,25 @@ $arcadian_music_artwork_inner_padding:  0 !default;
 $arcadian_music_artwork_text_align:     center !default;
 
 // #. Tinu ======================================
+$tinu_size_factor: 20px !default;
+
 $arcadian_secondary_theme_background:             map-get($arcadian_palette, secondary) !default;
 $arcadian_secondary_theme_border_color:           map-get($arcadian_palette, secondary) !default;
 
 $arcadian_tinu_background:                        '../img/tinu.jpg' !default;
 $arcadian_tinu_h1_font_size:                      100px !default; //80, 60
-//$arcadian_tinu_
-//$arcadian_tinu_
 $arcadian_tinu_h1_margin_top:                     30px !default;
 $arcadian_tinu_logo_height:                       80px !default; //60, 40
-//$arcadian_tinu_
-//$arcadian_tinu_
 $arcadian_tinu_countdown_margin_top:              30px !default;
 $arcadian_tinu_countdown_display:                 inline-block !default;
 $arcadian_tinu_countdown_font_size:               100px !default; //80
-//$arcadian_tinu_
 $arcadian_tinu_countdown_font_weight:             lighter !default;
 $arcadian_tinu_countdown_box_padding_top:         0 !default; // bot=20
-//$arcadian_tinu_
 $arcadian_tinu_countdown_box_padding_right:       40px !default;
+$arcadian_tinu_countdown_box_padding_bottom:      $arcadian_tinu_countdown_box_padding_top !default;
+$arcadian_tinu_countdown_box_padding_left:        $arcadian_tinu_countdown_box_padding_right !default;
 $arcadian_tinu_countdown_box_text_align:          center !default;
 $arcadian_tinu_countdown_box_first_line_height:   100px !default; // 80
-//$arcadian_tinu_
 $arcadian_tinu_countdown_box_text_font_size:      20px !default;
 $arcadian_tinu_links_social_color:                $white !default;
 $arcadian_tinu_links_social_color_hover:          map-get($arcadian_palette, secondary) !default;
