@@ -1,7 +1,13 @@
-// Require gulp
-var gulp = require('gulp');
+// gulpfile.js
 
-// Require plugins
+/** Dependencies ================================
+ */
+var gulp         = require('gulp'),
+    sass         = require('gulp-sass'),
+    minify       = require('gulp-cssnano'),
+    notify       = require('gulp-autoprefixer'),
+    autoprefixer = require('gulp-autoprefixer');
+// Require plugins (original author)
 var path = require('path');
 var less = require('gulp-less');
 var concat = require('gulp-concat');
@@ -13,6 +19,56 @@ var imagemin = require('gulp-imagemin');
 var concatCss = require('gulp-concat-css');
 var minifyCss = require('gulp-minify-css');
 
+/** Variables ===================================
+ * | silly, long, reused paths/dirs go here if needed.
+ */
+var $supported = [
+  'last 2 versions',
+  'safari >= 8',
+  'ie >= 10',
+  'ff >= 20',
+  'ios 6',
+  'android 4'
+];
+
+/** Build CSS Task ------------------------------
+ * | $ gulp build:css
+ * |
+ * | 1. compiles scss into css,
+ * | 2. autoprefix necessary css attributes/values,
+ * | 3. place compiled file into ./css directory
+ * | 4. minify prefixed css,
+ * | 5. rename minified file with a '.min' suffix,
+ * | 6. place minified file into ./css directory
+ * | 7. notify on task completion
+ */
+gulp.task('sass', function() {
+  return gulp.src('./assets/sass/arcadian.scss')
+    .pipe(sass({ /* 1. */
+      outputStyle: 'expanded'
+    }).on('error', sass.logError))
+    .pipe(autoprefixer({ /* 2. */
+      browsers: $supported,
+      add: true,
+      cascade: false
+    }))
+    .pipe(rename('main.css'))
+    .pipe(gulp.dest('./public/css')) /* 3. */
+    .pipe(minify({ /* 4. */
+      discardUnused: { fontFace: false }
+    }))
+    .pipe(rename({ /* 5. */
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest('./public/css')) /* 6. */
+    .pipe(notify({ /* 7. */
+      onLast: true,
+      message: 'sass compilation complete!'
+    }));
+});
+
+/** Original Author's Gulp Tasks ================
+ */
 gulp.task('less', function () {
     return gulp.src(['./assets/less/arcadian.less'])
         .pipe(less({
