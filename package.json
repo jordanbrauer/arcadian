@@ -32,6 +32,8 @@
     "gulp": "^3.9.0",
     "gulp-awspublish": "^3.0.1",
     "gulp-concat": "^2.6.0",
+    "gulp-concat-css": "*",
+    "gulp-minify-css": "*",
     "gulp-cssnano": "^2.1.2",
     "gulp-imagemin": "^3.0.1",
     "gulp-less": "^3.0.5",
