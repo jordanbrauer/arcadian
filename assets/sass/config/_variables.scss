@@ -1,0 +1,51 @@
+// _variables.scss
+
+// Table of Contents ============================
+// |
+//
+
+// #. Global Variables ==========================
+//
+// Typography
+$global_font_style:     normal !default;
+$global_font_weight:    normal !default;
+$global_font_size:      16px !default;
+$global_line_height:    150% !default; // equivelant to 1.5
+$global_font_family:    'Open Sans', 'Helvetica Neue', Arial, sans-serif !default;
+$global_font:           $global_font_style $global_font_weight $global_font_size#{'/'}$global_line_height $global_font_family !default;
+
+// Animations/Transitions
+$global_transition: all 0.35s !default;
+
+// #. Arcadian Color Pallette ===================
+//
+$arcadian_palette: (
+  primary:    #412d8e,
+  secondary:  #f05f40,
+  dark:       #222
+) !default;
+
+// #. Arcadian Lyrics ===========================
+//
+$lyrics_background_size:      cover !default;
+$lyrics_background_repeat:    no-repeat !default;
+$lyrics_background_position:  center center !default;
+$lyrics_margin_bottom:        20px !default;
+
+$lyrics_intro_padding:        20px !default;
+
+$lyrics_path:     '../img/music/' !default;
+$lyrics_format:   '.jpg' !default;
+
+$arcadian_lyrics: (
+  fashionstatement:   $lyrics_path + 'fashionstatement-background' + $lyrics_format,
+  subtlety:           $lyrics_path + 'subtlety-background' + $lyrics_format,
+  lionsheart:         $lyrics_path + 'lionsheart-background' + $lyrics_format,
+  mandy:              $lyrics_path + 'mandy-background' + $lyrics_format,
+  alligator:          $lyrics_path + 'alligator-background' + $lyrics_format,
+  duality:            $lyrics_path + 'duality-background' + $lyrics_format,
+  eastboundstrip:     $lyrics_path + 'eastboundstrip-background' + $lyrics_format,
+  legacies:           $lyrics_path + 'legacies-background' + $lyrics_format,
+  fornow:             $lyrics_path + 'fornow-background' + $lyrics_format,
+  youcanbet:          $lyrics_path + 'youcanbet-background' + $lyrics_format,
+) !default;
