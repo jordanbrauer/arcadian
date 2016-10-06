@@ -3,5 +3,5 @@ node_modules/
 .sass-cache/
 public/
 .awspublish-arcadian
-config/
+config/config.js
 .DS_Store
