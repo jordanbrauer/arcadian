@@ -26,6 +26,8 @@ var $supported = [
   'last 2 versions',
   'safari >= 8',
   'ie >= 10',
+  'ie <= 10',
+  'ff <= 20',
   'ff >= 20',
   'ios 6',
   'android 4'
