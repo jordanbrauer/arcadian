@@ -49,3 +49,12 @@ $arcadian_lyrics: (
   fornow:             $lyrics_path + 'fornow-background' + $lyrics_format,
   youcanbet:          $lyrics_path + 'youcanbet-background' + $lyrics_format,
 ) !default;
+
+// #. Arcadian Music ============================
+//
+$arcadian_music_link_cursor:            pointer !default;
+$arcadian_music_link_iframe_display:    none !default;
+
+$arcadian_music_artwork_outer_padding:  5px !default;
+$arcadian_music_artwork_inner_padding:  0 !default;
+$arcadian_music_artwork_text_align:     center !default;
