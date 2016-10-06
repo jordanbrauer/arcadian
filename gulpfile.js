@@ -5,7 +5,7 @@
 var gulp         = require('gulp'),
     sass         = require('gulp-sass'),
     minify       = require('gulp-cssnano'),
-    notify       = require('gulp-autoprefixer'),
+    notify       = require('gulp-notify'),
     autoprefixer = require('gulp-autoprefixer');
 // Require plugins (original author)
 var path = require('path');
