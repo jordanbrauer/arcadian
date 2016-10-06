@@ -1,11 +1,13 @@
 // Mixins
 
+// replaced by autoprefixer
 .transition-all() {
     -webkit-transition: all 0.35s;
     -moz-transition: all 0.35s;
     transition: all 0.35s;
 }
 
+// replaced by autoprefixer
 .background-cover() {
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -13,6 +15,7 @@
     -o-background-size: cover;
 }
 
+// sassified!
 .button-variant(@color; @background; @border) {
     color: @color;
     background-color: @background;
@@ -54,6 +57,7 @@
     }
 }
 
+// replaced by set of variavles.
 .sans-serif-font() {
     font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
 }
