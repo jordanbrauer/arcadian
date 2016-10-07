@@ -29,24 +29,23 @@
 // Sass Version Imports                         #
 //===============================================
 
-// Configuration ================================
+// Variables ====================================
 //
 @import 'config/variables';
-//@import 'config/settings';
 
-// Functions & Mixins ===========================
+// Global =======================================
+//
+@import 'config/global';
+@import 'components/custom';
+
+// Methods ======================================
 //
 //@import 'components/functons';
 @import 'components/mixins';
-
-// Generic Styles ===============================
-//
-//@import 'components/global';
-//@import 'components/custom';
 
 // Components ===================================
 //
 @import 'components/tinu';
 @import 'components/lyrics';
-//@import 'components/music';
+@import 'components/music';
 //@import 'components/helpers';

@@ -2,6 +2,7 @@
 @import "mixins.less"; // sassified !
 
 // Global Components
+// sassified-ish... same problem as custom.less & offset-right.less
 html,
 body {
     height: 100%;
@@ -357,8 +358,8 @@ body {
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
 }
 
-@import "offset-right.less";
-@import "custom.less";
+@import "offset-right.less"; // sassified-ish... put into _custom.scss
+@import "custom.less"; // sassified-ish... hardcoded values remain & code not refactored
 @import "lyrics.less"; // sassified!
-@import "tinu.less";
+@import "tinu.less"; // sassified!
 @import "music.less"; // sassified!
