@@ -1,0 +1,18 @@
+// Hexadecimal Alpha Colour function
+@function hda($hexdec: null, $alpha: 1)
+{
+  @if $hexdec == null {
+    // throw error if no value supplied for $hexdec
+    @error "$hexdex cannot be null: was, NULL";
+  } @else {
+    // evaluate input
+    @if $alpha >= 1 {
+      // return plain hexadecimal value if $alpha is greater than or equal to 1.
+      @return $hexdec;
+    } @else {
+      // otherwise return an rgba value with an alpha value.
+      @return rgba($hexdec, $alpha);
+    }
+  }
+
+}
