@@ -1,279 +1,112 @@
 // _custom.scss
 
-// Lots of stuff in here can either be attained from bootstrap natively,
-// or should be it's own unique component to Arcadian. Read below comment on why
-// I will not be fully converting this css.
-
 /** Bootstrap custom classes ====================
  */
-// Column Offset, Right
-// Personally, I feel that Bootstrap-Sass should be a dependency for this project.
-// You seem to have a couple of small changes to their default code, and the way
-// you are implementing these are not very scalable/reliable.
-// Unfortunately though, fixing up dependecies and compiling Bootstrap from source is
-// a little out of scope for this issue PR. Perhaps I will open up another issue after
-// and you can make a decision yourself. :)
-.col-xs-offset-right-12 {
-  margin-right: 100%;
-}
-.col-xs-offset-right-11 {
-  margin-right: 91.66666667%;
-}
-.col-xs-offset-right-10 {
-  margin-right: 83.33333333%;
-}
-.col-xs-offset-right-9 {
-  margin-right: 75%;
-}
-.col-xs-offset-right-8 {
-  margin-right: 66.66666667%;
-}
-.col-xs-offset-right-7 {
-  margin-right: 58.33333333%;
-}
-.col-xs-offset-right-6 {
-  margin-right: 50%;
-}
-.col-xs-offset-right-5 {
-  margin-right: 41.66666667%;
-}
-.col-xs-offset-right-4 {
-  margin-right: 33.33333333%;
-}
-.col-xs-offset-right-3 {
-  margin-right: 25%;
-}
-.col-xs-offset-right-2 {
-  margin-right: 16.66666667%;
-}
-.col-xs-offset-right-1 {
-  margin-right: 8.33333333%;
-}
-.col-xs-offset-right-0 {
-  margin-right: 0;
-}
-@media (min-width: 768px) {
-  .col-sm-offset-right-12 {
-    margin-right: 100%;
-  }
-  .col-sm-offset-right-11 {
-    margin-right: 91.66666667%;
-  }
-  .col-sm-offset-right-10 {
-    margin-right: 83.33333333%;
-  }
-  .col-sm-offset-right-9 {
-    margin-right: 75%;
-  }
-  .col-sm-offset-right-8 {
-    margin-right: 66.66666667%;
-  }
-  .col-sm-offset-right-7 {
-    margin-right: 58.33333333%;
-  }
-  .col-sm-offset-right-6 {
-    margin-right: 50%;
-  }
-  .col-sm-offset-right-5 {
-    margin-right: 41.66666667%;
-  }
-  .col-sm-offset-right-4 {
-    margin-right: 33.33333333%;
-  }
-  .col-sm-offset-right-3 {
-    margin-right: 25%;
-  }
-  .col-sm-offset-right-2 {
-    margin-right: 16.66666667%;
-  }
-  .col-sm-offset-right-1 {
-    margin-right: 8.33333333%;
-  }
-  .col-sm-offset-right-0 {
-    margin-right: 0;
-  }
-}
-@media (min-width: 992px) {
-  .col-md-offset-right-12 {
-    margin-right: 100%;
-  }
-  .col-md-offset-right-11 {
-    margin-right: 91.66666667%;
-  }
-  .col-md-offset-right-10 {
-    margin-right: 83.33333333%;
-  }
-  .col-md-offset-right-9 {
-    margin-right: 75%;
-  }
-  .col-md-offset-right-8 {
-    margin-right: 66.66666667%;
-  }
-  .col-md-offset-right-7 {
-    margin-right: 58.33333333%;
-  }
-  .col-md-offset-right-6 {
-    margin-right: 50%;
-  }
-  .col-md-offset-right-5 {
-    margin-right: 41.66666667%;
-  }
-  .col-md-offset-right-4 {
-    margin-right: 33.33333333%;
-  }
-  .col-md-offset-right-3 {
-    margin-right: 25%;
-  }
-  .col-md-offset-right-2 {
-    margin-right: 16.66666667%;
-  }
-  .col-md-offset-right-1 {
-    margin-right: 8.33333333%;
-  }
-  .col-md-offset-right-0 {
-    margin-right: 0;
-  }
-}
-@media (min-width: 1200px) {
-  .col-lg-offset-right-12 {
-    margin-right: 100%;
-  }
-  .col-lg-offset-right-11 {
-    margin-right: 91.66666667%;
-  }
-  .col-lg-offset-right-10 {
-    margin-right: 83.33333333%;
-  }
-  .col-lg-offset-right-9 {
-    margin-right: 75%;
-  }
-  .col-lg-offset-right-8 {
-    margin-right: 66.66666667%;
-  }
-  .col-lg-offset-right-7 {
-    margin-right: 58.33333333%;
-  }
-  .col-lg-offset-right-6 {
-    margin-right: 50%;
-  }
-  .col-lg-offset-right-5 {
-    margin-right: 41.66666667%;
-  }
-  .col-lg-offset-right-4 {
-    margin-right: 33.33333333%;
-  }
-  .col-lg-offset-right-3 {
-    margin-right: 25%;
-  }
-  .col-lg-offset-right-2 {
-    margin-right: 16.66666667%;
-  }
-  .col-lg-offset-right-1 {
-    margin-right: 8.33333333%;
-  }
-  .col-lg-offset-right-0 {
-    margin-right: 0;
-  }
+// Navigation
+.navbar-default {
+ background-color: $white;
+ border-color: rgba(map-get($arcadian-palette, dark), 5%);
+ font-family: $global_font_family;
+ transition: $global_transition;
+ .navbar-header .navbar-brand {
+   color: map-get($arcadian-palette, primary);
+   font-family: $global_font_family;
+   font-weight: 700;
+   text-transform: uppercase;
+   &:hover,
+   &:focus {
+     color: darken(map-get($arcadian-palette, primary), 10%);
+   }
+ }
+ .nav {
+   > li {
+     > a,
+     > a:focus {
+       text-transform: uppercase;
+       font-weight: 700;
+       font-size: 13px;
+       color: map-get($arcadian-palette, dark);
+       &:hover {
+         color: map-get($arcadian-palette, primary);
+       }
+     }
+     &.active {
+       > a,
+       > a:focus {
+         color: map-get($arcadian-palette, primary) !important;
+         background-color: transparent;
+         &:hover {
+           background-color: transparent;
+         }
+       }
+     }
+   }
+ }
+ @media (min-width: 768px) {
+   background-color: transparent;
+   border-color: rgba($white, 30%);
+   .navbar-header .navbar-brand {
+     color: rgba($white, 70%);
+     &:hover,
+     &:focus {
+       color: $white;
+     }
+   }
+   .nav > li > a,
+   .nav > li > a:focus {
+     color: rgba($white, 70%);
+     &:hover {
+       color: $white;
+     }
+   }
+   &.affix {
+     background-color: $white;
+     border-color: rgba(map-get($arcadian-palette, dark), 5%);
+     .navbar-header .navbar-brand {
+       color: map-get($arcadian-palette, primary);
+       font-size: 14px;
+       &:hover,
+       &:focus {
+         color: darken(map-get($arcadian-palette, primary), 10%);
+       }
+     }
+     .nav > li > a,
+     .nav > li > a:focus {
+       color: map-get($arcadian-palette, dark);
+       &:hover {
+         color: map-get($arcadian-palette, primary);
+       }
+     }
+   }
+ }
 }
 
+// Text context styles
+.text-primary {
+  color: map-get($arcadian-palette, primary);
+}
+
+// Button Styles
+.btn-default {
+  @include button-variant(map-get($arcadian-palette, primary), $white, $white);
+}
+
+.btn-primary {
+  @include button-variant($white, map-get($arcadian-palette, primary), map-get($arcadian-palette, primary));
+}
+
+.btn {
+  font-family: $global_font_family;
+  border: none;
+  border-radius: 300px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.btn-xl {
+  padding: 15px 30px;
+}
 // Bootstrap btn-primary:hover
 .btn-primary:hover {
   background-color: map-get($arcadian_palette, secondary);
-}
-
-// keyword stuffing lol?
-.seo {
-  display: none !important;
-}
-
-header.header-2 {
-  background-image: url('../img/header-2.jpg');
-}
-
-header.header-3 {
-  background-image: url('../img/header-3.jpg');
-}
-
-// this does not need to be an id(#).
-section#contact {
-  padding-bottom: 10px;
-}
-
-.social__link {
-  color: map-get($arcadian_palette, primary);
-  display: block;
-
-  &:hover {
-    text-decoration: none;
-    color: map-get($arcadian_palette, secondary);
-  }
-}
-
-.event-details {
-  p {
-    font-weight: bold;
-  }
-
-  span {
-    font-weight: normal;
-  }
-}
-
-#form-message {
-  padding: 20px;
-}
-
-#mainNav {
-  &.affix {
-    & .logo-light {
-      display: none;
-    }
-
-    & .logo-dark {
-      display: block;
-    }
-  }
-
-  & .logo-light {
-    display: block;
-  }
-
-  & .logo-dark {
-    display: none;
-  }
-}
-
-.logo-main {
-  margin: 0 auto;
-  height: 8vw;
-}
-
-.photo-gallery {
-  padding: 50px;
-}
-
-img.logo-brand {
-  height: 20px;
-}
-
-.service-box {
-  max-width: 200px;
-}
-
-textarea {
-  box-sizing: border-box;
-  max-height: 250px;
-  min-height: 120px;
-  overflow-x: hidden;
-  resize: vertical;
-}
-
-@media (max-width: 767px){
-  .logo-light{
-    display: none !important;
-  }
-
-  .logo-dark{
-    display: block !important;
-  }
 }
