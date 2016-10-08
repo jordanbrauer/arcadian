@@ -1,10 +1,14 @@
 // _variables.scss
 
 // Table of Contents ============================
-// |
+// | 1. Global Variables
+// | 2. Arcadian Color Pallette
+// | 3. Arcadian Lyrics
+// | 4. Arcadian Music
+// | 5. Tinu
 //
 
-// #. Global Variables ==========================
+// 1. Global Variables ==========================
 //
 // Breakpoints
 $breakpoints: (
@@ -24,7 +28,7 @@ $global_font:           $global_font_style $global_font_weight $global_font_size
 $global_transition: all 0.35s !default;
 
 
-// #. Arcadian Color Pallette ===================
+// 2. Arcadian Color Pallette ===================
 //
 $arcadian_palette: (
   primary:    #412d8e,
@@ -35,7 +39,7 @@ $arcadian_palette: (
 $black: #0a0a0a;
 $white: #efefef;
 
-// #. Arcadian Lyrics ===========================
+// 3. Arcadian Lyrics ===========================
 //
 $lyrics_path:     '../img/music/' !default;
 $lyrics_format:   '.jpg' !default;
@@ -61,7 +65,7 @@ $arcadian_lyrics: (
   youcanbet:          $lyrics_path + 'youcanbet-background' + $lyrics_format,
 ) !default;
 
-// #. Arcadian Music ============================
+// 4. Arcadian Music ============================
 //
 $arcadian_music_link_cursor:            pointer !default;
 $arcadian_music_link_iframe_display:    none !default;
@@ -70,7 +74,7 @@ $arcadian_music_artwork_outer_padding:  5px !default;
 $arcadian_music_artwork_inner_padding:  0 !default;
 $arcadian_music_artwork_text_align:     center !default;
 
-// #. Tinu ======================================
+// 5. Tinu ======================================
 $tinu_size_factor: 20px !default;
 
 $arcadian_secondary_theme_background:             map-get($arcadian_palette, secondary) !default;
@@ -84,7 +88,7 @@ $arcadian_tinu_countdown_margin_top:              30px !default;
 $arcadian_tinu_countdown_display:                 inline-block !default;
 $arcadian_tinu_countdown_font_size:               100px !default; //80
 $arcadian_tinu_countdown_font_weight:             lighter !default;
-$arcadian_tinu_countdown_box_padding_top:         0 !default; // bot=20
+$arcadian_tinu_countdown_box_padding_top:         0 !default; // btm=20
 $arcadian_tinu_countdown_box_padding_right:       40px !default;
 $arcadian_tinu_countdown_box_padding_bottom:      $arcadian_tinu_countdown_box_padding_top !default;
 $arcadian_tinu_countdown_box_padding_left:        $arcadian_tinu_countdown_box_padding_right !default;

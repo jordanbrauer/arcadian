@@ -1,6 +1,6 @@
 // _global.scss
 
-/** CSS Reset/Default Styles ====================
+/** CSS Reset & Default Styles ==================
 */
 html,
 body {
@@ -46,113 +46,12 @@ p {
   margin-bottom: 20px;
 }
 
-.bg-primary {
-  background-color: map-get($arcadian-palette, primary);
-}
-
-.bg-dark {
-  background-color: map-get($arcadian-palette, dark);
-  color: $white;
-}
-
-.text-faded {
-  color: rgba($white, 70%);
-}
-
 section {
   padding: 100px 0;
 }
 
 aside {
   padding: 50px 0;
-}
-
-.no-padding {
-  padding: 0;
-}
-
-.part-padding {
-  padding: 20px 0;
-}
-
-// Navigation
-
-.navbar-default {
-  background-color: $white;
-  border-color: rgba(map-get($arcadian-palette, dark), 5%);
-  font-family: $global_font_family;
-  transition: $global_transition;
-  .navbar-header .navbar-brand {
-    color: map-get($arcadian-palette, primary);
-    font-family: $global_font_family;
-    font-weight: 700;
-    text-transform: uppercase;
-    &:hover,
-    &:focus {
-      color: darken(map-get($arcadian-palette, primary), 10%);
-    }
-  }
-  .nav {
-    > li {
-      > a,
-      > a:focus {
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 13px;
-        color: map-get($arcadian-palette, dark);
-        &:hover {
-          color: map-get($arcadian-palette, primary);
-        }
-      }
-      &.active {
-        > a,
-        > a:focus {
-          color: map-get($arcadian-palette, primary) !important;
-          background-color: transparent;
-          &:hover {
-            background-color: transparent;
-          }
-        }
-      }
-    }
-  }
-  @media (min-width: 768px) {
-    background-color: transparent;
-    border-color: rgba($white, 30%);
-    .navbar-header .navbar-brand {
-      color: rgba($white, 70%);
-      &:hover,
-      &:focus {
-        color: $white;
-      }
-    }
-    .nav > li > a,
-    .nav > li > a:focus {
-      color: rgba($white, 70%);
-      &:hover {
-        color: $white;
-      }
-    }
-    &.affix {
-      background-color: $white;
-      border-color: rgba(map-get($arcadian-palette, dark), 5%);
-      .navbar-header .navbar-brand {
-        color: map-get($arcadian-palette, primary);
-        font-size: 14px;
-        &:hover,
-        &:focus {
-          color: darken(map-get($arcadian-palette, primary), 10%);
-        }
-      }
-      .nav > li > a,
-      .nav > li > a:focus {
-        color: map-get($arcadian-palette, dark);
-        &:hover {
-          color: map-get($arcadian-palette, primary);
-        }
-      }
-    }
-  }
 }
 
 // Homepage Header
@@ -239,7 +138,8 @@ header {
     color: $white;
     opacity: 0;
     display: block;
-    background: rgba(map-get($arcadian-palette, primary), 90%);
+    background: hda(map-get($arcadian-palette, primary), 0.9);
+    // background: hda(map-get($arcadian-palette, primary), 0.9);
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -292,37 +192,6 @@ header {
   }
 }
 
-// Bootstrap Overrides
-.text-primary {
-  color: map-get($arcadian-palette, primary);
-}
-
-.no-gutter > [class*='col-'] {
-  padding-right:0;
-  padding-left:0;
-}
-
-// Button Styles
-.btn-default {
-  @include button-variant(map-get($arcadian-palette, primary), $white, $white);
-}
-
-.btn-primary {
-  @include button-variant($white, map-get($arcadian-palette, primary), map-get($arcadian-palette, primary));
-}
-
-.btn {
-  font-family: $global_font_family;
-  border: none;
-  border-radius: 300px;
-  font-weight: 700;
-  text-transform: uppercase;
-}
-
-.btn-xl {
-  padding: 15px 30px;
-}
-
 // Extras
 // -- Highlight Color Customization
 ::-moz-selection {
@@ -355,4 +224,101 @@ body {
   margin: auto 0;
   padding: 5px;
   font-family: $global_font_family;
+}
+
+
+
+
+// =======
+
+header.header-2 {
+  background-image: url('../img/header-2.jpg');
+}
+
+header.header-3 {
+  background-image: url('../img/header-3.jpg');
+}
+
+// this does not need to be an id(#).
+section#contact {
+  padding-bottom: 10px;
+}
+
+.social__link {
+  color: map-get($arcadian_palette, primary);
+  display: block;
+
+  &:hover {
+    text-decoration: none;
+    color: map-get($arcadian_palette, secondary);
+  }
+}
+
+.event-details {
+  p {
+    font-weight: bold;
+  }
+
+  span {
+    font-weight: normal;
+  }
+}
+
+#form-message {
+  padding: 20px;
+}
+
+#mainNav {
+  &.affix {
+    & .logo-light {
+      display: none;
+    }
+
+    & .logo-dark {
+      display: block;
+    }
+  }
+
+  & .logo-light {
+    display: block;
+  }
+
+  & .logo-dark {
+    display: none;
+  }
+}
+
+.logo-main {
+  margin: 0 auto;
+  height: 8vw;
+}
+
+.photo-gallery {
+  padding: 50px;
+}
+
+img.logo-brand {
+  height: 20px;
+}
+
+.service-box {
+  max-width: 200px;
+}
+
+textarea {
+  box-sizing: border-box;
+  max-height: 250px;
+  min-height: 120px;
+  overflow-x: hidden;
+  resize: vertical;
+}
+
+@media (max-width: 767px){
+  .logo-light{
+    display: none !important;
+  }
+
+  .logo-dark{
+    display: block !important;
+  }
 }
