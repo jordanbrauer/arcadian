@@ -139,7 +139,6 @@ header {
     opacity: 0;
     display: block;
     background: hda(map-get($arcadian-palette, primary), 0.9);
-    // background: hda(map-get($arcadian-palette, primary), 0.9);
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -217,7 +216,7 @@ img::-moz-selection {
 }
 
 body {
-  webkit-tap-highlight-color: map-get($arcadian-palette, dark);
+  -webkit-tap-highlight-color: map-get($arcadian-palette, dark);
 }
 
 .footer p {
@@ -225,11 +224,6 @@ body {
   padding: 5px;
   font-family: $global_font_family;
 }
-
-
-
-
-// =======
 
 header.header-2 {
   background-image: url('../img/header-2.jpg');
