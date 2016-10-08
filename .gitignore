@@ -1,6 +1,7 @@
 npm-debug.log
 node_modules/
 .sass-cache/
+_settings.scss
 public/
 .awspublish-arcadian
 config/config.js
