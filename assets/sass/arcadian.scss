@@ -33,15 +33,15 @@
 //
 @import 'config/variables';
 
-// Global =======================================
-//
-@import 'config/global';
-@import 'components/custom';
-
 // Methods ======================================
 //
 //@import 'components/functons';
 @import 'components/mixins';
+
+// Global =======================================
+//
+@import 'config/global';
+@import 'components/custom';
 
 // Components ===================================
 //
