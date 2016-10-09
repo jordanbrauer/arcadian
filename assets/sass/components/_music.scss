@@ -1,21 +1,21 @@
 // _music.scss
 
 .music__link {
-	cursor: $arcadian_music_link_cursor;
+    cursor: $arcadian_music_link_cursor;
 
-	iframe {
-		display: $arcadian_music_link_iframe_display;
-	}
+    iframe {
+        display: $arcadian_music_link_iframe_display;
+    }
 }
 
 .music__artwork div {
-	padding: $arcadian_music_artwork_outer_padding;
+    padding: $arcadian_music_artwork_outer_padding;
 
-	.artwork {
-		padding: $arcadian_music_artwork_inner_padding;
-	}
+    .artwork {
+        padding: $arcadian_music_artwork_inner_padding;
+    }
 }
 
 .music__artwork--download {
-	text-align: $arcadian_music_artwork_text_align;
+    text-align: $arcadian_music_artwork_text_align;
 }

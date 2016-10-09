@@ -1,11 +1,11 @@
 /// _social.scss
 
 .social__link {
-	color: map-get($arcadian_palette, primary);
-	display: block;
+    color: map-get($arcadian_palette, primary);
+    display: block;
 
-	&:hover {
-		text-decoration: none;
-		color: map-get($arcadian_palette, secondary);
-	}
+    &:hover {
+        text-decoration: none;
+        color: map-get($arcadian_palette, secondary);
+    }
 }

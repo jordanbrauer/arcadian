@@ -2,19 +2,19 @@
 
 // Modified bootstrap mixin.
 @mixin button-variant($color, $background, $border) {
-	color: $color;
-	background-color: $background;
-	border-color: $border;
-	transition: $global_transition;
+    color: $color;
+    background-color: $background;
+    border-color: $border;
+    transition: $global_transition;
 
-	&:hover,
-	&:focus,
-	&.focus,
-	&:active,
-	&.active,
-	.open > .dropdown-toggle {
-		color: $color;
-		background-color: darken($background, 5%);
-		border-color: darken($border, 7%);
-	}
+    &:hover,
+    &:focus,
+    &.focus,
+    &:active,
+    &.active,
+    .open > .dropdown-toggle {
+        color: $color;
+        background-color: darken($background, 5%);
+        border-color: darken($border, 7%);
+    }
 }

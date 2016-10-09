@@ -1,18 +1,18 @@
 // _lyrics.scss
 
 .lyrics__words {
-	background-size: $lyrics_background_size;
-	background-repeat: $lyrics_background_repeat;
-	background-position: $lyrics_background_position;
-	margin: 0 0 $lyrics_margin_bottom 0;
+    background-size: $lyrics_background_size;
+    background-repeat: $lyrics_background_repeat;
+    background-position: $lyrics_background_position;
+    margin: 0 0 $lyrics_margin_bottom 0;
 
-	@each $lyric in $arcadian_lyrics {
-		&#{'#'}#{nth($lyric, 1)} {
-			background-image: url(#{nth($lyric, 2)});
-		}
-	}
+    @each $lyric in $arcadian_lyrics {
+        &#{'#'}#{nth($lyric, 1)} {
+            background-image: url(#{nth($lyric, 2)});
+        }
+    }
 }
 
 .lyrics__intro {
-	padding: $lyrics_intro_padding;
+    padding: $lyrics_intro_padding;
 }

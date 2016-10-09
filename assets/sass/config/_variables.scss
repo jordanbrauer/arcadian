@@ -12,17 +12,17 @@
 //
 // Breakpoints
 $breakpoints: (
-sm: 430px,
-md: 767px,
+    sm: 430px,
+    md: 767px,
 ) !default;
 
 // Typography
-$global_font_style:     normal !default;
-$global_font_weight:    normal !default;
-$global_font_size:      16px !default;
-$global_line_height:    150% !default; // equivelant to 1.5
-$global_font_family:    'Open Sans', 'Helvetica Neue', Arial, sans-serif !default;
-$global_font:           $global_font_style $global_font_weight $global_font_size#{'/'}$global_line_height $global_font_family !default;
+$global_font_style: normal !default;
+$global_font_weight: normal !default;
+$global_font_size: 16px !default;
+$global_line_height: 150% !default; // equivelant to 1.5
+$global_font_family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !default;
+$global_font: $global_font_style $global_font_weight $global_font_size#{'/'}$global_line_height $global_font_family !default;
 
 // Animations/Transitions
 $global_transition: all 0.35s !default;
@@ -31,9 +31,9 @@ $global_transition: all 0.35s !default;
 // 2. Arcadian Color Pallette ===================
 //
 $arcadian_palette: (
-  primary:    #412d8e,
-  secondary:  #f05f40,
-  dark:       #222
+    primary: #412d8e,
+    secondary: #f05f40,
+    dark: #222
 ) !default;
 
 $black: #0a0a0a;
@@ -41,59 +41,59 @@ $white: #efefef;
 
 // 3. Arcadian Lyrics ===========================
 //
-$lyrics_path:     '../img/music/' !default;
-$lyrics_format:   '.jpg' !default;
+$lyrics_path: '../img/music/' !default;
+$lyrics_format: '.jpg' !default;
 
-$lyrics_background_size:      cover !default;
-$lyrics_background_repeat:    no-repeat !default;
-$lyrics_background_position:  center center !default;
-$lyrics_margin_bottom:        20px !default;
+$lyrics_background_size: cover !default;
+$lyrics_background_repeat: no-repeat !default;
+$lyrics_background_position: center center !default;
+$lyrics_margin_bottom: 20px !default;
 
-$lyrics_intro_padding:        20px !default;
+$lyrics_intro_padding: 20px !default;
 
 
 $arcadian_lyrics: (
   fashionstatement:   $lyrics_path + 'fashionstatement-background' + $lyrics_format,
-  subtlety:           $lyrics_path + 'subtlety-background' + $lyrics_format,
-  lionsheart:         $lyrics_path + 'lionsheart-background' + $lyrics_format,
-  mandy:              $lyrics_path + 'mandy-background' + $lyrics_format,
-  alligator:          $lyrics_path + 'alligator-background' + $lyrics_format,
-  duality:            $lyrics_path + 'duality-background' + $lyrics_format,
-  eastboundstrip:     $lyrics_path + 'eastboundstrip-background' + $lyrics_format,
-  legacies:           $lyrics_path + 'legacies-background' + $lyrics_format,
-  fornow:             $lyrics_path + 'fornow-background' + $lyrics_format,
-  youcanbet:          $lyrics_path + 'youcanbet-background' + $lyrics_format,
+  subtlety: $lyrics_path + 'subtlety-background' + $lyrics_format,
+  lionsheart: $lyrics_path + 'lionsheart-background' + $lyrics_format,
+  mandy: $lyrics_path + 'mandy-background' + $lyrics_format,
+  alligator: $lyrics_path + 'alligator-background' + $lyrics_format,
+  duality: $lyrics_path + 'duality-background' + $lyrics_format,
+  eastboundstrip: $lyrics_path + 'eastboundstrip-background' + $lyrics_format,
+  legacies: $lyrics_path + 'legacies-background' + $lyrics_format,
+  fornow: $lyrics_path + 'fornow-background' + $lyrics_format,
+  youcanbet: $lyrics_path + 'youcanbet-background' + $lyrics_format,
 ) !default;
 
 // 4. Arcadian Music ============================
 //
-$arcadian_music_link_cursor:            pointer !default;
-$arcadian_music_link_iframe_display:    none !default;
+$arcadian_music_link_cursor: pointer !default;
+$arcadian_music_link_iframe_display: none !default;
 
-$arcadian_music_artwork_outer_padding:  5px !default;
-$arcadian_music_artwork_inner_padding:  0 !default;
-$arcadian_music_artwork_text_align:     center !default;
+$arcadian_music_artwork_outer_padding: 5px !default;
+$arcadian_music_artwork_inner_padding: 0 !default;
+$arcadian_music_artwork_text_align: center !default;
 
 // 5. Tinu ======================================
 $tinu_size_factor: 20px !default;
 
-$arcadian_secondary_theme_background:             map-get($arcadian_palette, secondary) !default;
-$arcadian_secondary_theme_border_color:           map-get($arcadian_palette, secondary) !default;
+$arcadian_secondary_theme_background: map-get($arcadian_palette, secondary) !default;
+$arcadian_secondary_theme_border_color: map-get($arcadian_palette, secondary) !default;
 
-$arcadian_tinu_background:                        '../img/tinu.jpg' !default;
-$arcadian_tinu_h1_font_size:                      100px !default; //80, 60
-$arcadian_tinu_h1_margin_top:                     30px !default;
-$arcadian_tinu_logo_height:                       80px !default; //60, 40
-$arcadian_tinu_countdown_margin_top:              30px !default;
-$arcadian_tinu_countdown_display:                 inline-block !default;
-$arcadian_tinu_countdown_font_size:               100px !default; //80
-$arcadian_tinu_countdown_font_weight:             lighter !default;
-$arcadian_tinu_countdown_box_padding_top:         0 !default; // btm=20
-$arcadian_tinu_countdown_box_padding_right:       40px !default;
-$arcadian_tinu_countdown_box_padding_bottom:      $arcadian_tinu_countdown_box_padding_top !default;
-$arcadian_tinu_countdown_box_padding_left:        $arcadian_tinu_countdown_box_padding_right !default;
-$arcadian_tinu_countdown_box_text_align:          center !default;
-$arcadian_tinu_countdown_box_first_line_height:   100px !default; // 80
-$arcadian_tinu_countdown_box_text_font_size:      20px !default;
-$arcadian_tinu_links_social_color:                $white !default;
-$arcadian_tinu_links_social_color_hover:          map-get($arcadian_palette, secondary) !default;
+$arcadian_tinu_background: '../img/tinu.jpg' !default;
+$arcadian_tinu_h1_font_size: 100px !default; //80, 60
+$arcadian_tinu_h1_margin_top: 30px !default;
+$arcadian_tinu_logo_height: 80px !default; //60, 40
+$arcadian_tinu_countdown_margin_top: 30px !default;
+$arcadian_tinu_countdown_display: inline-block !default;
+$arcadian_tinu_countdown_font_size: 100px !default; //80
+$arcadian_tinu_countdown_font_weight: lighter !default;
+$arcadian_tinu_countdown_box_padding_top: 0 !default; // btm=20
+$arcadian_tinu_countdown_box_padding_right: 40px !default;
+$arcadian_tinu_countdown_box_padding_bottom: $arcadian_tinu_countdown_box_padding_top !default;
+$arcadian_tinu_countdown_box_padding_left: $arcadian_tinu_countdown_box_padding_right !default;
+$arcadian_tinu_countdown_box_text_align: center !default;
+$arcadian_tinu_countdown_box_first_line_height: 100px !default; // 80
+$arcadian_tinu_countdown_box_text_font_size: 20px !default;
+$arcadian_tinu_links_social_color: $white !default;
+$arcadian_tinu_links_social_color_hover: map-get($arcadian_palette, secondary) !default;
